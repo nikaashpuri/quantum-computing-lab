@@ -24,6 +24,17 @@ namespace Microsoft.Quantum.Samples.DatabaseSearch {
         
         adjoint invert;
     }
+
+    operation DatabaseOracle2 (markedQubit : Qubit, databaseRegister : Qubit[]) : Unit {
+        
+        body (...) {
+            // if the first qubit is a 1
+            // it counts as a solution state
+            Controlled X(databaseRegister[0], markedQubit);
+        }
+        
+        adjoint invert;
+    }
     
     
     operation UniformSuperpositionOracle (databaseRegister : Qubit[]) : Unit {
