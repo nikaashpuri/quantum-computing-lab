@@ -30,7 +30,7 @@ namespace Microsoft.Quantum.Samples.DatabaseSearch {
         body (...) {
             // if the first qubit is a 1
             // it counts as a solution state
-            Controlled X(databaseRegister[0], markedQubit);
+            Controlled X([databaseRegister[0]], markedQubit);
         }
         
         adjoint invert;
